@@ -1014,8 +1014,8 @@ QPushButton {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>269</width>
-                   <height>675</height>
+                   <width>100</width>
+                   <height>30</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_7">
@@ -2868,8 +2868,8 @@ QPushButton {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1379</width>
-                   <height>574</height>
+                   <width>98</width>
+                   <height>74</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -3150,7 +3150,17 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
              </column>
              <column>
               <property name="text">
-               <string>Proxy</string>
+               <string>Ip Address</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Score Proxy</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Score Browser</string>
               </property>
              </column>
             </widget>

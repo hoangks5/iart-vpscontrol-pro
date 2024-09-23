@@ -29,8 +29,8 @@ class TaskBar(QObject):
         self.ui.pushButton_6.clicked.connect(self.switch_to_system)
         self.ui.pushButton_3.clicked.connect(self.switch_to_monitor)
         self.ui.pushButton_7.clicked.connect(self.switch_to_monitor)
-        self.ui.pushButton_4.clicked.connect(self.switch_to_setting)
-        self.ui.pushButton_8.clicked.connect(self.switch_to_setting)
+        self.ui.pushButton_15.clicked.connect(self.switch_to_go_login)
+        self.ui.pushButton_16.clicked.connect(self.switch_to_go_login)
     def setup_marquee(self):
         self.text = " "*250 + self.title
         self.index = 0
@@ -52,5 +52,5 @@ class TaskBar(QObject):
         self.ui.stackedWidget.setCurrentIndex(1)
     def switch_to_monitor(self):
         self.ui.stackedWidget.setCurrentIndex(2)
-    def switch_to_setting(self):
+    def switch_to_go_login(self):
         self.ui.stackedWidget.setCurrentIndex(3)

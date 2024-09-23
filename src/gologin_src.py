@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QCheckBox, QWidget, QHBoxLayout, QPushButton, QComboBox
+from PyQt6.QtWidgets import QCheckBox, QWidget, QHBoxLayout, QPushButton, QComboBox, QProgressBar
 from PyQt6.QtCore import  QTimer, Qt
 from PyQt6.QtGui import QPixmap, QIcon
 from PyQt6 import QtCore
@@ -41,6 +41,15 @@ def download_image(file_path):
     image.load(file_path)
     return image
 
+def check_info_profil_id(profile_id):
+    # kiểm tra file json có tồn tại không
+    if not os.path.exists(f"src/json/score/{profile_id}.json"):
+        return False
+    else:
+        with open(f"src/json/score/{profile_id}.json", "r", encoding="utf-8") as f:
+            data = f.read()
+            data = json.loads(data)
+            return data
 
 def get_script_name():
     # đọc các file .py trong thư mục scripts
@@ -49,6 +58,40 @@ def get_script_name():
         if file.endswith(".py"):
             list_script.append(file)
     return list_script
+
+def set_progress_color(progress_bar, value):
+    if value <= 20:
+        color = "red"
+    elif value <= 40:
+        color = "orange"
+    elif value <= 60:
+        color = "yellow"
+    elif value <= 80:
+        color = "lightgreen"
+    else:
+        color = "green"
+    
+    # Sử dụng stylesheet để đổi màu thanh progress bar
+    progress_bar.setStyleSheet("""
+        QProgressBar::chunk {
+            background-color: """ + color + """;
+        }
+        QProgressBar {
+    border: 2px solid #555;  /* Đường viền xung quanh */
+    border-radius: 10px;  /* Bo góc thanh tiến trình */
+    background-color: #f0f0f0;  /* Màu nền của thanh */
+    text-align: center;
+    color: black;  /* Màu chữ của số phần trăm */
+    font-weight: bold;  /* Chữ đậm */
+}
+QProgressBar::chunk {
+    background-color: {color};  /* Sử dụng màu sắc từ hàm set color */
+    border-radius: 10px;  /* Bo góc của phần đã tải */
+    margin: 0 1px;  /* Tạo khoảng cách giữa các phần */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Hiệu ứng bóng */
+}
+
+    """)
 
 class GoLogin:
     def __init__(self, ui):
@@ -62,7 +105,13 @@ class GoLogin:
         self.ui.tableWidget_3.setColumnWidth(1, 200)
         self.ui.tableWidget_3.setColumnWidth(2, 150)
         self.ui.tableWidget_3.setColumnWidth(3, 200)
-        
+    def get_row_selected(self):
+        selected_rows = []
+        for i in range(self.ui.tableWidget_3.rowCount()):
+            checkbox = self.ui.tableWidget_3.cellWidget(i, 0).layout().itemAt(0).widget()
+            if checkbox.isChecked():
+                selected_rows.append(i)
+        return selected_rows
     def get_script_name():
     # đọc các file .py trong thư mục scripts
         list_script = []
@@ -89,6 +138,7 @@ class GoLogin:
             import json
             with open("src/json/gologin_profile.json", "w") as f:
                 f.write(json.dumps(response.json()))
+            self.load_profile()
         else:
             QMessageBox.critical(None, "Error", "API Key is invalid")
     def load_select(self):
@@ -102,6 +152,8 @@ class GoLogin:
             checkbox_layout.layout().setContentsMargins(0, 0, 0, 0)
             self.ui.tableWidget_3.setCellWidget(i, 0, checkbox_layout)
     def load_profile(self):
+        # xóa dữ liệu cũ
+        self.ui.tableWidget_3.setRowCount(0)
         # kiểm tra file json có tồn tại không
         if not os.path.exists("src/json/gologin_profile.json"):
             return
@@ -126,11 +178,49 @@ class GoLogin:
                     self.add_item_combobox(self.combobox)
                     self.combobox.setCurrentText(self.ui.comboBox.currentText())
                     self.ui.tableWidget_3.setCellWidget(i, 2, self.combobox)
-                    if 'host' in profile["proxy"]:
-                        self.ui.tableWidget_3.setItem(i, 3, QTableWidgetItem(profile["proxy"]["host"]))
+                    
+                    profile_id = profile["id"]
+                    data = check_info_profil_id(profile_id)
+                    if data != False:
+                        if 'country' in data:
+                            country_code = data["country"].lower()
+                            flag_url = get_flag_url(country_code)
+                            flag_image = download_image(flag_url)
+                            flag_icon = QIcon(flag_image)
+                            flag_item = QTableWidgetItem(data["ip_address"])
+                            flag_item.setIcon(flag_icon)
+                            self.ui.tableWidget_3.setItem(i, 3, flag_item)
+                        
+                        progress_proxy = QProgressBar()
+                        progress_proxy.setValue(data["score_proxy"])
+                        set_progress_color(progress_proxy, data["score_proxy"])
+                        self.ui.tableWidget_3.setCellWidget(i, 4, progress_proxy)
+                        progress_browser = QProgressBar()
+                        progress_browser.setValue(data["score_browser"])
+                        set_progress_color(progress_browser, data["score_browser"])
+                        self.ui.tableWidget_3.setCellWidget(i, 5, progress_browser)
+                        
+                        
         self.load_select()
+    def push_select_all(self, tableWidget):
+        # kiểm tra xem tất cả row đã được chọn chưa
+        is_all_checked = True
+        for i in range(tableWidget.rowCount()):
+            checkbox = tableWidget.cellWidget(i, 0).layout().itemAt(0).widget()
+            if not checkbox.isChecked():
+                is_all_checked = False
+        # nếu tất cả row đã được chọn thì bỏ chọn tất cả
+        if is_all_checked:
+            for i in range(tableWidget.rowCount()):
+                checkbox = tableWidget.cellWidget(i, 0).layout().itemAt(0).widget()
+                checkbox.setChecked(False)
+        else:
+            for i in range(tableWidget.rowCount()):
+                checkbox = tableWidget.cellWidget(i, 0).layout().itemAt(0).widget()
+                checkbox.setChecked(True)
     def connect_button(self):
         self.ui.pushButton_17.clicked.connect(self.connection_login)
+        self.ui.pushButton_18.clicked.connect(lambda: self.push_select_all(self.ui.tableWidget_3))
 
         
     

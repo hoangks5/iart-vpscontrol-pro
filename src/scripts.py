@@ -447,7 +447,7 @@ time.sleep(1)
                     file.write(self.ui.textEdit_3.toPlainText())
         
         self.dashboard.add_item_combobox(self.ui.comboBox)
-
+        self.dashboard.add_item_combobox(self.ui.comboBox_2)
         
     def connect_button(self):
         self.ui.pushButton_27.clicked.connect(self.add_chrome)

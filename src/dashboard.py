@@ -80,6 +80,7 @@ class Dashboard:
         self.ui = ui
         self.resize_table()
         self.add_item_combobox(self.ui.comboBox)
+        self.add_item_combobox(self.ui.comboBox_2)
 
     def get_row_selected(self):
         selected_rows = []
