@@ -33,7 +33,8 @@ def get_score(profile_id, api_key):
 	gl = GoLogin({
 		"token": api_key,
 		"profile_id": profile_id,
-		"port": random_port
+		"port": random_port,
+		"is_cloud_headless": True,
 		})
 	score_full = {
 		"profile_id": profile_id,
@@ -42,7 +43,7 @@ def get_score(profile_id, api_key):
 	chrome_options = Options()
 	chrome_options.add_experimental_option("debuggerAddress", debugger_address)
 	# headless mode
-	chrome_options.add_argument("--headless")
+	chrome_options.
 	driver = webdriver.Chrome(options=chrome_options)
 	driver.get("https://ipfighter.com/")
 	time.sleep(2)
