@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon=img/fav.ico  .\main.py --exclude-module PyQt5 --name="Iart VPSControl Pro"

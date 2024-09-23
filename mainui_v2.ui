@@ -1,0 +1,3466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1677</width>
+    <height>891</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>iArt VPSControl Pro </string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/logo-iart.png</normaloff>img/logo-iart.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(255, 255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+background-color: rgb(0, 0, 0);
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+}
+
+
+QPushButton {
+color:white;
+text-align:center;
+height: 36px;
+border:none;
+border-radius:10px;
+}
+
+QPushButton:checked{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);
+font-weight:bold;
+}
+QPushButton:hover {
+    background-color: rgb(255, 255, 255); /* Màu nền khi hover */
+    border-color: rgb(0, 150, 255); /* Màu viền khi hover */
+    color: rgb(0, 0, 0); /* Màu chữ khi hover */
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+}</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>30</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/dashboard.svg</normaloff>img/dashboard.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_16">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/browser.svg</normaloff>img/browser.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/scripts.svg</normaloff>img/scripts.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/map.svg</normaloff>img/map.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/setting.svg</normaloff>img/setting.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>28</width>
+           <height>556</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap>img/logo-iart (1).png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+background-color: rgb(0, 0, 0)
+}
+
+QPushButton {
+background-clip: padding-box;
+color:white;
+text-align:left;
+height: 36px;
+border:none;
+padding-left:20px;
+padding-right: 20px;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-top-right-radius:0px;
+border-bottom-right-radius:0px;
+font: 57 11pt &quot;Dubai Medium&quot;;
+}
+QPushButton:checked{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 127);
+font-weight:bold;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 255, 255); /* Màu nền khi hover */
+    border-color: rgb(0, 150, 255); /* Màu viền khi hover */
+    color: rgb(0, 0, 0); /* Màu chữ khi hover */
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Bóng đổ khi hover */
+}
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>30</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Computer</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/dashboard.svg</normaloff>img/dashboard.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_15">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>GoLogin</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/browser.svg</normaloff>img/browser.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Scripts</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/scripts.svg</normaloff>img/scripts.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Schedule</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/map.svg</normaloff>img/map.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Setting</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/setting.svg</normaloff>img/setting.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>28</width>
+           <height>520</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>img/logo-iart2.png</pixmap>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="widget_3" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color:white;
+text-align:left;
+height: 30px;
+border:none;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/more.svg</normaloff>img/more.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="styleSheet">
+            <string notr="true">border: none;
+color: rgb(255, 0, 0);
+font: 75 italic 13pt &quot;Arial&quot;;</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_10">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color:white;
+text-align:left;
+height: 30px;
+border:none;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>img/logout.svg</normaloff>img/logout.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #2b2b2b; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ trắng */
+    border: 2px solid #4CAF50; /* Viền màu xanh lá cây */
+    border-radius: 10px; /* Bo góc */
+    padding: 5px; /* Khoảng cách giữa viền và chữ */
+	height: 20px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff4081; /* Viền đổi màu khi focus */
+    background-color: #333333; /* Màu nền tối hơn khi focus */
+}
+
+QPushButton{
+border-radius:10px;
+border: 2px solid #23074d;
+background-color: #cc5333;
+color:#FFB6C1;
+height: 30px;
+width: 80px;
+}
+
+QPushButton:hover {
+    border: 2px solid #009fff ;
+	background-color:#23074d;
+            }
+QPushButton:pressed {
+                background-color: #5650de; /* Màu nền khi nhấn */
+            }
+
+QComboBox{
+background-color: rgb(85, 255, 127);
+border-radius: 5px;
+border: 2px solid #23074d;
+height:40px;
+width: 105px;
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="dashboard">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="styleSheet">
+              <string notr="true">height:300px;</string>
+             </property>
+             <property name="gridStyle">
+              <enum>Qt::SolidLine</enum>
+             </property>
+             <column>
+              <property name="text">
+               <string/>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Hostname</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>IP Address</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Location</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Script</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Status</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>View Sceen</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Setting</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QWidget" name="widget_4" native="true">
+               <property name="styleSheet">
+                <string notr="true">QWidget{
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+}
+
+QPushButton{
+border-radius:10px;
+border: 2px solid #23074d;
+background-color: #cc5333;
+color:#FFB6C1;
+height: 40px;
+width: 120px;
+}
+
+QPushButton:hover {
+    border: 2px solid #009fff ;
+	background-color:#23074d;
+            }
+QPushButton:pressed {
+                background-color: #5650de; /* Màu nền khi nhấn */
+            }
+
+QComboBox{
+background-color: rgb(85, 255, 127);
+border-radius: 5px;
+border: 2px solid #23074d;
+height:40px;
+width: 105px;
+}
+</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <spacer name="verticalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_11">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Chọn tất cả</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>img/sellect.svg</normaloff>img/sellect.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_12">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Set kịch bản</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>img/load.svg</normaloff>img/load.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_15" native="true">
+               <property name="styleSheet">
+                <string notr="true">QWidget{
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+}
+
+QPushButton{
+border-radius:10px;
+border: 2px solid #23074d;
+background-color: #cc5333;
+color:#FFB6C1;
+height: 40px;
+width: 120px;
+}
+
+QPushButton:hover {
+    border: 2px solid #009fff ;
+	background-color:#23074d;
+            }
+QPushButton:pressed {
+                background-color: #5650de; /* Màu nền khi nhấn */
+            }
+
+QComboBox{
+background-color: rgb(85, 255, 127);
+border-radius: 5px;
+border: 2px solid #23074d;
+height:40px;
+width: 105px;
+}
+</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_13">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Dừng lại</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>img/stop.svg</normaloff>img/stop.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_14">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>Bắt đầu</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>img/start.svg</normaloff>img/start.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_5" native="true">
+               <property name="styleSheet">
+                <string notr="true">QWidget {
+border-radius:10px;
+background-color: rgb(0, 0, 0);
+color: rgb(170, 0, 0)
+}</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QTextEdit" name="textEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="system">
+          <layout class="QGridLayout" name="gridLayout_23">
+           <item row="0" column="3">
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1" colspan="3">
+            <widget class="QWidget" name="widget_7" native="true">
+             <property name="styleSheet">
+              <string notr="true">QWidget {
+    border:None
+}
+</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="2" colspan="4">
+               <widget class="QTextEdit" name="textEdit_3">
+                <property name="styleSheet">
+                 <string notr="true">QTextEdit {
+	
+	font: 57 8pt &quot;Dubai Medium&quot;;
+    background-color: rgb(255, 255, 255); /* Màu nền của QTextEdit */
+    border-radius: 7px;
+    border: 2px solid rgb(0, 80, 118); /* Đường viền */
+    color: rgb(0, 0, 0); /* Màu chữ */
+    selection-background-color: rgb(0, 128, 255); /* Màu nền khi chọn văn bản */
+    selection-color: rgb(255, 255, 255); /* Màu chữ khi chọn văn bản */
+}
+
+/* Tùy chỉnh thanh cuộn khi QTextEdit hiển thị thanh cuộn */
+QTextEdit QScrollBar:vertical {
+    background-color: rgb(240, 240, 240); /* Màu nền thanh cuộn */
+    width: 12px; /* Độ rộng của thanh cuộn */
+    margin: 15px 0 15px 0;
+    border-radius: 6px; /* Bo góc cho thanh cuộn */
+}
+
+QTextEdit QScrollBar::handle:vertical {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn */
+    min-height: 20px;
+    border-radius: 6px; /* Bo góc cho thanh cuộn */
+}
+
+QTextEdit QScrollBar::handle:vertical:hover {
+    background-color: rgb(0, 128, 255); /* Màu thanh cuộn khi hover */
+}
+
+QTextEdit QScrollBar::add-line:vertical, QTextEdit QScrollBar::sub-line:vertical {
+    border: none;
+    background-color: none;
+    height: 0px;
+}
+
+QTextEdit QScrollBar::add-page:vertical, QTextEdit QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Tương tự cho thanh cuộn ngang nếu cần */
+QTextEdit QScrollBar:horizontal {
+    background-color: rgb(240, 240, 240); /* Màu nền thanh cuộn */
+    height: 12px;
+    margin: 0 15px 0 15px;
+    border-radius: 6px;
+}
+
+QTextEdit QScrollBar::handle:horizontal {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn ngang */
+    min-width: 20px;
+    border-radius: 6px;
+}
+
+QTextEdit QScrollBar::handle:horizontal:hover {
+    background-color: rgb(0, 128, 255); /* Màu thanh cuộn khi hover */
+}
+
+QTextEdit QScrollBar::add-line:horizontal, QTextEdit QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: none;
+    width: 0px;
+}
+
+QTextEdit QScrollBar::add-page:horizontal, QTextEdit QScrollBar::sub-page:horizontal {
+    background: none;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="styleSheet">
+                 <string notr="true">QScrollArea {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    border: 2px solid rgb(0, 80, 118);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(0, 128, 255);
+    selection-color: rgb(255, 255, 255);
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn */
+    width: 12px;
+    margin: 15px 0 15px 0; /* Khoảng cách giữa đầu và cuối thanh cuộn */
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn */
+    min-height: 20px; /* Chiều cao tối thiểu của thanh cuộn */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background-color: none;
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn ngang */
+    height: 12px;
+    margin: 0 15px 0 15px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn ngang */
+    min-width: 20px; /* Chiều rộng tối thiểu của thanh cuộn ngang */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: none;
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+QPushButton {
+    border-radius: 10px;
+    border: 2px solid rgb(0, 128, 255); /* Thay đổi màu sắc và độ dày của border */
+    padding: 10px; /* Thêm padding để tạo khoảng cách giữa nội dung và viền */
+	
+	
+	
+	font: 57 9pt &quot;Dubai Medium&quot;;
+}
+</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>269</width>
+                   <height>675</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_7">
+                  <item row="2" column="0">
+                   <spacer name="verticalSpacer_3">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_15">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <spacer name="horizontalSpacer_17">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="5">
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2" colspan="2">
+            <widget class="QWidget" name="widget_6" native="true">
+             <property name="styleSheet">
+              <string notr="true">QWidget {
+    background-color: rgb(20, 20, 20); /* Tối hơn để phù hợp với chủ đề tối */
+    border-radius: 15px;
+    font: 8pt &quot;MS Reference Sans Serif&quot;;
+}
+
+QPushButton {
+    border-radius: 10px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: #ffffff; /* Màu chữ trắng để dễ đọc */
+    height: 40px;
+    width: 120px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:rgb(255, 229, 241);
+    color: rgb(80, 85, 255);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_14">
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_22">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Chạy Thử</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/run_test.svg</normaloff>img/run_test.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="pushButton_23">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Quay Lại</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/back.svg</normaloff>img/back.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QPushButton" name="pushButton_25">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>Xóa Hết</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/delete.svg</normaloff>img/delete.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_24">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Lưu Script</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/save.svg</normaloff>img/save.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="2">
+            <layout class="QGridLayout" name="gridLayout_15">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget_2">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <widget class="QWidget" name="tab">
+                <attribute name="title">
+                 <string>General</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_5">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="widget_14" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QWidget{
+background-color: rgb(206, 206, 206);
+border-radius: 8px;
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+width: 10px;
+height: 10px;
+}
+
+
+QPushButton {
+    border-radius: 7px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: rgb(0, 0, 0);
+    height: 20px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:#4A569D; /* Gradient sáng hơn khi hover */
+    color: #ffffff; /* Đảm bảo màu chữ vẫn trắng khi hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+
+
+QGroupBox {
+    border: 2px solid rgb(118, 0, 88);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 3 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+QLineEdit {
+    border: 1px solid #aaa; /* Đổi màu viền của QLineEdit */
+    border-radius: 5px; /* Làm tròn góc của QLineEdit */
+    padding: 5px; /* Khoảng cách giữa viền và nội dung của QLineEdit */
+    background-color: #333; /* Màu nền của QLineEdit */
+    color: #fff; /* Màu chữ của QLineEdit */
+}</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_42">
+                    <item row="0" column="1">
+                     <spacer name="horizontalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_33">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="3">
+                     <spacer name="horizontalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QGroupBox" name="chrome_8">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Delay Step</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_20">
+                       <item row="1" column="0" colspan="3">
+                        <widget class="QPushButton" name="pushButton_28">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLineEdit" name="lineEdit_20">
+                         <property name="placeholderText">
+                          <string>s</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QLineEdit" name="lineEdit_21">
+                         <property name="placeholderText">
+                          <string>s</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLabel" name="label_6">
+                         <property name="font">
+                          <font>
+                           <family>MS Reference Sans Serif</family>
+                           <pointsize>8</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>+-</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <spacer name="horizontalSpacer_12">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="3" column="2">
+                     <spacer name="verticalSpacer_11">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QGroupBox" name="chrome_7">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Web Default</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_19">
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QPushButton" name="pushButton_27">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_19">
+                         <property name="placeholderText">
+                          <string>Go to link url</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_4">
+                <attribute name="title">
+                 <string>Auto Web</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_16">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="widget_11" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QWidget{
+background-color: rgb(206, 206, 206);
+border-radius: 8px;
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+width: 10px;
+height: 10px;
+}
+
+
+QPushButton {
+    border-radius: 7px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: rgb(0, 0, 0);
+    height: 20px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:#4A569D; /* Gradient sáng hơn khi hover */
+    color: #ffffff; /* Đảm bảo màu chữ vẫn trắng khi hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+
+
+QGroupBox {
+    border: 2px solid rgb(0, 170, 0);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 3 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+QLineEdit {
+    border: 1px solid #aaa; /* Đổi màu viền của QLineEdit */
+    border-radius: 5px; /* Làm tròn góc của QLineEdit */
+    padding: 5px; /* Khoảng cách giữa viền và nội dung của QLineEdit */
+    background-color: #333; /* Màu nền của QLineEdit */
+    color: #fff; /* Màu chữ của QLineEdit */
+}</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_17">
+                    <item row="1" column="0">
+                     <widget class="QGroupBox" name="chrome_6">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Chrome New</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_18">
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="pushButton_26">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLineEdit" name="lineEdit_18">
+                         <property name="placeholderText">
+                          <string>Proxy</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="3">
+                     <widget class="QGroupBox" name="click_13">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Chrome Profile</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_52">
+                       <item row="4" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_77">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Profile Xpath</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="5" column="0" colspan="2">
+                        <widget class="QPushButton" name="pushButton_74">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_80">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Proxy</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <spacer name="verticalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="0">
+                     <spacer name="horizontalSpacer_29">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="3">
+                     <spacer name="horizontalSpacer_16">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="7">
+                     <spacer name="horizontalSpacer_34">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="1" column="6" colspan="2">
+                     <widget class="QGroupBox" name="click_14">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Add Cookie</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_53">
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_75">
+                         <property name="text">
+                          <string>Load</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_76">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_81">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Cookie Xpath</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="2" column="4">
+                     <widget class="QGroupBox" name="click_26">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Zoom In/Out</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_64">
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_98">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>% Zoom in/out</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0" colspan="2">
+                        <widget class="QPushButton" name="pushButton_97">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="0" column="4">
+                     <spacer name="horizontalSpacer_2">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="1" column="4">
+                     <widget class="QGroupBox" name="click_25">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Resize Chrome</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_63">
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_95">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_94">
+                         <property name="text">
+                          <string>Full</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLineEdit" name="lineEdit_95">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Width</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="lineEdit_96">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Height</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="2" column="3">
+                     <widget class="QGroupBox" name="click_27">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Go Url</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_65">
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_99">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Go to link url</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0" colspan="2">
+                        <widget class="QPushButton" name="pushButton_98">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QGroupBox" name="click_21">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Add Extension</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_59">
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_87">
+                         <property name="text">
+                          <string>Load</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_88">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_82">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>.crx file</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_5">
+                <attribute name="title">
+                 <string>Keyboard</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_21">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="widget_12" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QWidget{
+background-color: rgb(206, 206, 206);
+border-radius: 8px;
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+width: 10px;
+height: 10px;
+}
+
+
+QPushButton {
+    border-radius: 7px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: rgb(0, 0, 0);
+    height: 20px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:#4A569D; /* Gradient sáng hơn khi hover */
+    color: #ffffff; /* Đảm bảo màu chữ vẫn trắng khi hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+
+
+QGroupBox {
+    border: 2px solid rgb(170, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 3 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+QLineEdit {
+    border: 1px solid #aaa; /* Đổi màu viền của QLineEdit */
+    border-radius: 5px; /* Làm tròn góc của QLineEdit */
+    padding: 5px; /* Khoảng cách giữa viền và nội dung của QLineEdit */
+    background-color: #333; /* Màu nền của QLineEdit */
+    color: #fff; /* Màu chữ của QLineEdit */
+}</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_40">
+                    <item row="1" column="2">
+                     <widget class="QGroupBox" name="click_19">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Multi Press</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_57">
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_83">
+                         <property name="text">
+                          <string>Get</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_84">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_87">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Press1 Press2</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QGroupBox" name="click_15">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Keyboard</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_49">
+                       <item row="2" column="0" colspan="3">
+                        <widget class="QLineEdit" name="lineEdit_72">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Text</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0" colspan="3">
+                        <widget class="QPushButton" name="pushButton_69">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QGroupBox" name="click_16">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Press</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_54">
+                       <item row="3" column="0">
+                        <widget class="QPushButton" name="pushButton_77">
+                         <property name="text">
+                          <string>Get</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QPushButton" name="pushButton_78">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0" colspan="2">
+                        <widget class="QLineEdit" name="lineEdit_83">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Press</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <spacer name="verticalSpacer_7">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="0">
+                     <spacer name="horizontalSpacer_6">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="1">
+                     <spacer name="horizontalSpacer_20">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_21">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="3">
+                     <spacer name="horizontalSpacer_22">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_6">
+                <attribute name="title">
+                 <string>Mouse</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_22">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="widget_13" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QWidget{
+background-color: rgb(206, 206, 206);
+border-radius: 8px;
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+width: 10px;
+height: 10px;
+}
+
+
+QPushButton {
+    border-radius: 7px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: rgb(0, 0, 0);
+    height: 20px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:#4A569D; /* Gradient sáng hơn khi hover */
+    color: #ffffff; /* Đảm bảo màu chữ vẫn trắng khi hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+
+
+QGroupBox {
+    border: 2px solid rgb(153, 0, 153);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 3 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+QLineEdit {
+    border: 1px solid #aaa; /* Đổi màu viền của QLineEdit */
+    border-radius: 5px; /* Làm tròn góc của QLineEdit */
+    padding: 5px; /* Khoảng cách giữa viền và nội dung của QLineEdit */
+    background-color: #333; /* Màu nền của QLineEdit */
+    color: #fff; /* Màu chữ của QLineEdit */
+}</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_41">
+                    <item row="1" column="2">
+                     <widget class="QGroupBox" name="sleep_14">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Click Mouse</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_44">
+                       <item row="3" column="3">
+                        <widget class="QPushButton" name="pushButton_62">
+                         <property name="text">
+                          <string>H.Right</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="3">
+                        <widget class="QPushButton" name="pushButton_61">
+                         <property name="text">
+                          <string>Right</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QPushButton" name="pushButton_89">
+                         <property name="text">
+                          <string>H.Left</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_81">
+                         <property name="text">
+                          <string>Left</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QGroupBox" name="click_17">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Move Point</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_55">
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_79">
+                         <property name="text">
+                          <string>Get</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="lineEdit_84">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Y</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLineEdit" name="lineEdit_85">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>X</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_80">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="3">
+                     <widget class="QGroupBox" name="click_18">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Scroll</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_56">
+                       <item row="0" column="0">
+                        <widget class="QLineEdit" name="lineEdit_86">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>+- Scroll Height</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="pushButton_82">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QGroupBox" name="click_20">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Move Boundary</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_58">
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="lineEdit_88">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Height</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLineEdit" name="lineEdit_89">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Width</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLineEdit" name="lineEdit_90">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>X</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLineEdit" name="lineEdit_91">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Y</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QPushButton" name="pushButton_90">
+                         <property name="text">
+                          <string>Paste</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QPushButton" name="pushButton_85">
+                         <property name="text">
+                          <string>Crop</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0" colspan="2">
+                        <widget class="QPushButton" name="pushButton_86">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <spacer name="verticalSpacer_8">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="0">
+                     <spacer name="horizontalSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="1">
+                     <spacer name="horizontalSpacer_24">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_25">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="3">
+                     <spacer name="horizontalSpacer_8">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_2">
+                <attribute name="title">
+                 <string>AI</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="0" column="0">
+                  <widget class="QWidget" name="widget_16" native="true">
+                   <property name="styleSheet">
+                    <string notr="true">QWidget{
+background-color: rgb(206, 206, 206);
+border-radius: 8px;
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+width: 10px;
+height: 10px;
+}
+
+
+QPushButton {
+    border-radius: 7px;
+    border: 2px solid #c2185b; /* Màu viền đỏ hồng đậm */
+    background: linear-gradient(145deg, #ff4081, #c2185b); /* Gradient từ hồng nhạt đến đỏ đậm */
+    color: rgb(0, 0, 0);
+    height: 20px;
+    text-align: center; /* Sửa chính tả từ text-algin thành text-align */
+    font-weight: bold; /* Chữ đậm để tạo ấn tượng */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút bấm */
+}
+
+QPushButton:hover {
+    border: 2px solid #f50057; /* Màu viền hồng sáng hơn khi hover */
+    background:#4A569D; /* Gradient sáng hơn khi hover */
+    color: #ffffff; /* Đảm bảo màu chữ vẫn trắng khi hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Đổ bóng nổi bật hơn khi hover */
+}
+
+QPushButton:pressed {
+    background: linear-gradient(145deg, #d81b60, #c2185b); /* Gradient tối hơn khi nhấn */
+    border: 2px solid #b71c1c; /* Màu viền đỏ đậm hơn khi nhấn */
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng lõm khi nhấn */
+}
+
+
+QGroupBox {
+    border: 2px solid rgb(153, 0, 153);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 3 10px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+QLineEdit {
+    border: 1px solid #aaa; /* Đổi màu viền của QLineEdit */
+    border-radius: 5px; /* Làm tròn góc của QLineEdit */
+    padding: 5px; /* Khoảng cách giữa viền và nội dung của QLineEdit */
+    background-color: #333; /* Màu nền của QLineEdit */
+    color: #fff; /* Màu chữ của QLineEdit */
+}</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_43">
+                    <item row="4" column="0">
+                     <spacer name="verticalSpacer_12">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="0">
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="1">
+                     <spacer name="horizontalSpacer_26">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_27">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="0" column="3">
+                     <spacer name="horizontalSpacer_13">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QGroupBox" name="click_24">
+                      <property name="cursor">
+                       <cursorShape>ArrowCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="title">
+                       <string>Move Mouse In Image</string>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_62">
+                       <item row="1" column="2">
+                        <widget class="QPushButton" name="pushButton_100">
+                         <property name="text">
+                          <string>Add</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" colspan="3">
+                        <widget class="QLineEdit" name="lineEdit_102">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Base64 string</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="pushButton_99">
+                         <property name="text">
+                          <string>Crop</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="pushButton_101">
+                         <property name="text">
+                          <string>Paste</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_8" native="true">
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="5">
+               <spacer name="horizontalSpacer_30">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <spacer name="horizontalSpacer_19">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="7">
+               <spacer name="horizontalSpacer_18">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_23">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="6">
+               <spacer name="horizontalSpacer_28">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="1" colspan="2">
+               <widget class="QCalendarWidget" name="calendarWidget">
+                <property name="styleSheet">
+                 <string notr="true">QCalendarWidget {
+    background-color: #2c3e50; /* Màu nền */
+    border: 1px solid #34495e; /* Viền xung quanh */
+    border-radius: 10px; /* Bo tròn góc */
+    padding: 10px; /* Khoảng cách bên trong */
+}
+
+QCalendarWidget QAbstractItemView {
+    background-color: #34495e; /* Màu nền của ngày */
+    selection-background-color: #2980b9; /* Màu nền khi chọn */
+    selection-color: white; /* Màu chữ khi chọn */
+    alternate-background-color: #2c3e50; /* Màu nền của các hàng lẻ */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+QCalendarWidget QHeaderView::section {
+    background-color: #34495e; /* Màu nền của tiêu đề tuần */
+    color: white; /* Màu chữ */
+    padding: 5px; /* Khoảng cách bên trong */
+    border: 1px solid #2c3e50; /* Viền của tiêu đề tuần */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+QCalendarWidget QToolButton {
+    background-color: #2980b9; /* Màu nền của các nút điều khiển */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: #3498db; /* Màu nền khi di chuột qua */
+}
+
+QCalendarWidget QToolButton:pressed {
+    background-color: #1f77d1; /* Màu nền khi nhấn */
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="4" column="0">
+               <spacer name="verticalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="0">
+               <spacer name="verticalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="1" rowspan="4" colspan="9">
+               <widget class="QScrollArea" name="scrollArea_2">
+                <property name="styleSheet">
+                 <string notr="true">QScrollArea {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    border: 2px solid rgb(0, 80, 118);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(0, 128, 255);
+    selection-color: rgb(255, 255, 255);
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn */
+    width: 12px;
+    margin: 15px 0 15px 0; /* Khoảng cách giữa đầu và cuối thanh cuộn */
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn */
+    min-height: 20px; /* Chiều cao tối thiểu của thanh cuộn */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background-color: none;
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn ngang */
+    height: 12px;
+    margin: 0 15px 0 15px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn ngang */
+    min-width: 20px; /* Chiều rộng tối thiểu của thanh cuộn ngang */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: none;
+    width: 0px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+QPushButton {
+    border-radius: 10px;
+    border: 2px solid rgb(0, 128, 255); /* Thay đổi màu sắc và độ dày của border */
+    padding: 10px; /* Thêm padding để tạo khoảng cách giữa nội dung và viền */
+	
+	
+	
+	font: 57 9pt &quot;Dubai Medium&quot;;
+}
+</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1379</width>
+                   <height>574</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_10">
+                  <item row="0" column="0">
+                   <widget class="QTableWidget" name="tableWidget_2">
+                    <property name="styleSheet">
+                     <string notr="true">QTableWidget {
+    background-color: #2e2e2e; /* Màu nền của table */
+    border: none;
+    color: #e0e0e0; /* Màu chữ */
+    gridline-color: #555555; /* Màu của các đường lưới */
+}
+
+QTableWidget::item:selected {
+    background-color: #5a5a5a; /* Màu nền khi chọn một ô */
+    color: #ffffff; /* Màu chữ khi chọn một ô */
+}
+
+QHeaderView::section {
+    background-color: #333333; /* Màu nền của tiêu đề cột */
+    color: #ffffff; /* Màu chữ của tiêu đề cột */
+    padding: 5px; /* Khoảng cách padding */
+    border: 1px solid #444444; /* Đường viền của tiêu đề cột */
+}
+
+QTableCornerButton::section {
+    background-color: #333333; /* Màu nền của góc table */
+    border: 1px solid #444444; /* Đường viền của góc table */
+}
+QHeaderView::section {
+        border: none;  /* Loại bỏ viền cho các tiêu đề cột */
+    }
+QTableWidget::item:selected {
+        background-color: transparent;  /* Loại bỏ màu nền khi mục được chọn */
+    }
+</string>
+                    </property>
+                    <property name="showGrid">
+                     <bool>false</bool>
+                    </property>
+                    <property name="gridStyle">
+                     <enum>Qt::NoPen</enum>
+                    </property>
+                    <row>
+                     <property name="text">
+                      <string>0h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>1h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>2h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>3h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>4h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>5h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>6h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>7h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>8h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>9h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>10h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>11h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>12h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>13h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>14h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>15h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>16h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>17h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>18h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>19h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>20h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>21h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>22h</string>
+                     </property>
+                    </row>
+                    <row>
+                     <property name="text">
+                      <string>23h</string>
+                     </property>
+                    </row>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_31">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="4">
+               <spacer name="horizontalSpacer_32">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="text">
+              <string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NmYwMDRhMGVkMGExMTE1MzRiNDQxOWMiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2NmYwMDRkMDU0NzQ3ZGM3ZWUxMzA0ODEifQ.iqMAKeYtXMgtO-epJwoLl10k96QQZQPwKRSeAaKlmq4</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QTableWidget" name="tableWidget_3">
+             <property name="styleSheet">
+              <string notr="true">QScrollArea {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    border: 2px solid rgb(0, 80, 118);
+    color: rgb(0, 0, 0);
+    selection-background-color: rgb(0, 128, 255);
+    selection-color: rgb(255, 255, 255);
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn */
+    width: 12px;
+    margin: 15px 0 15px 0; /* Khoảng cách giữa đầu và cuối thanh cuộn */
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn */
+    min-height: 20px; /* Chiều cao tối thiểu của thanh cuộn */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background-color: none;
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background-color: rgb(230, 230, 230); /* Màu nền thanh cuộn ngang */
+    height: 12px;
+    margin: 0 15px 0 15px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: rgb(0, 80, 118); /* Màu thanh cuộn ngang */
+    min-width: 20px; /* Chiều rộng tối thiểu của thanh cuộn ngang */
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: none;
+    width: 0px;
+}</string>
+             </property>
+             <column>
+              <property name="text">
+               <string/>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Name Profile</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Script</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Proxy</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_17">
+             <property name="text">
+              <string>OK</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QWidget" name="widget_9" native="true">
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+font: 8pt &quot;MS Reference Sans Serif&quot;;
+}
+
+QPushButton{
+border-radius:10px;
+border: 2px solid #23074d;
+background-color: #cc5333;
+color:#FFB6C1;
+height: 40px;
+width: 120px;
+}
+
+QPushButton:hover {
+    border: 2px solid #009fff ;
+	background-color:#23074d;
+            }
+QPushButton:pressed {
+                background-color: #5650de; /* Màu nền khi nhấn */
+            }
+
+QComboBox{
+background-color: rgb(85, 255, 127);
+border-radius: 5px;
+border: 2px solid #23074d;
+height:40px;
+width: 105px;
+}
+</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QComboBox" name="comboBox_2"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_19">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Set kịch bản</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/load.svg</normaloff>img/load.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_21">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Bắt đầu</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/start.svg</normaloff>img/start.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_20">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Dừng lại</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/stop.svg</normaloff>img/stop.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_18">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Chọn tất cả</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>img/sellect.svg</normaloff>img/sellect.svg</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>385</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>widget_2</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_8</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>215</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_7</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>181</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_6</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_5</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>40</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>188</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>43</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_3</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>243</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>43</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_4</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>43</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_15</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_16</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_16</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pushButton_15</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
