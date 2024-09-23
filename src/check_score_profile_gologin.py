@@ -6,6 +6,7 @@ from gologin import GoLogin
 from gologin import getRandomPort
 from bs4 import BeautifulSoup
 import json
+import os
 import requests
 def get_random_port():
     return getRandomPort()
@@ -28,9 +29,9 @@ def list_profile_id(api_key):
        
 
 
-def get_score(profile_id):
+def get_score(profile_id, api_key):
 	gl = GoLogin({
-		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NmYwMDRhMGVkMGExMTE1MzRiNDQxOWMiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2NmYwMDRkMDU0NzQ3ZGM3ZWUxMzA0ODEifQ.iqMAKeYtXMgtO-epJwoLl10k96QQZQPwKRSeAaKlmq4",
+		"token": api_key,
 		"profile_id": profile_id,
 		"port": random_port
 		})
@@ -40,6 +41,8 @@ def get_score(profile_id):
 	debugger_address = gl.start()
 	chrome_options = Options()
 	chrome_options.add_experimental_option("debuggerAddress", debugger_address)
+	# headless mode
+	chrome_options.add_argument("--headless")
 	driver = webdriver.Chrome(options=chrome_options)
 	driver.get("https://ipfighter.com/")
 	time.sleep(2)
@@ -84,13 +87,14 @@ def get_score(profile_id):
 			score_full["score_browser"] = score
 			break
 	# ghi dữ liệu tiếp vào file json
+	# kiểm tra có thư mục json , score chưa
+	if not os.path.exists("src/json/score"):
+		os.makedirs("src/json/score")
+  
+ 
 	with open(f"src/json/score/{profile_id}.json", "w", encoding="utf-8") as f:
 		json.dump(score_full, f)
 	driver.close()
 	gl.stop()
 
 
-if __name__ == "__main__":
-	list_profile_ids = list_profile_id("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NmYwMDRhMGVkMGExMTE1MzRiNDQxOWMiLCJ0eXBlIjoiZGV2Iiwiand0aWQiOiI2NmYwMDRkMDU0NzQ3ZGM3ZWUxMzA0ODEifQ.iqMAKeYtXMgtO-epJwoLl10k96QQZQPwKRSeAaKlmq4")
-	for profile_id in list_profile_ids:
-		get_score(profile_id)

@@ -7,7 +7,23 @@ from PyQt6.QtWidgets import QTableWidgetItem
 import requests
 import os
 import json
-    
+from src.check_score_profile_gologin import *
+
+
+class ThreadCheckScoreProfile(QtCore.QThread):
+    finished = QtCore.pyqtSignal()
+    def __init__(self, api_key, parent=None):
+        super(ThreadCheckScoreProfile, self).__init__(parent)
+        self.api_key = api_key
+        self.list_profile_id = list_profile_id(api_key)
+        print(self.list_profile_id)
+    def run(self):
+        for profile_id in self.list_profile_id:
+            get_score(profile_id, self.api_key)
+            self.finished.emit()
+        
+        
+
 
 def get_flag_url(country_code):
     # Đường dẫn lưu trữ cờ quốc gia
@@ -218,10 +234,30 @@ class GoLogin:
             for i in range(tableWidget.rowCount()):
                 checkbox = tableWidget.cellWidget(i, 0).layout().itemAt(0).widget()
                 checkbox.setChecked(True)
+                
+    def get_row_selected(self):
+        selected_rows = []
+        for i in range(self.ui.tableWidget_3.rowCount()):
+            checkbox = self.ui.tableWidget_3.cellWidget(i, 0).layout().itemAt(0).widget()
+            if checkbox.isChecked():
+                selected_rows.append(i)
+        return selected_rows
+    
+    def scan_profile(self):
+        api_key = self.ui.lineEdit_2.text()
+        if api_key == "":
+            QMessageBox.critical(None, "Error", "API Key is invalid")
+            return
+        self.connection_login()
+        self.thread = ThreadCheckScoreProfile(api_key)
+        self.thread.finished.connect(self.load_profile)
+        self.thread.start()
+        
+    
     def connect_button(self):
         self.ui.pushButton_17.clicked.connect(self.connection_login)
         self.ui.pushButton_18.clicked.connect(lambda: self.push_select_all(self.ui.tableWidget_3))
-
+        self.ui.pushButton_29.clicked.connect(self.scan_profile)
         
     
         
