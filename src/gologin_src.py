@@ -115,7 +115,14 @@ class GoLogin:
         self.resize_table_widget_3()
         self.connect_button()
         self.load_profile()
-        
+    
+    def show_info(self, profile_id):
+        with open(f"src/json/score/{profile_id}.json", "r", encoding="utf-8") as f:
+            data = f.read()
+            data = json.loads(data)
+            recommend = data["recommend_proxy"]
+            QMessageBox.information(self.ui.widget_9, "Info", recommend)
+    
     def resize_table_widget_3(self):
         self.ui.tableWidget_3.setColumnWidth(0, 30)
         self.ui.tableWidget_3.setColumnWidth(1, 200)
@@ -215,6 +222,22 @@ class GoLogin:
                         progress_browser.setValue(data["score_browser"])
                         set_progress_color(progress_browser, data["score_browser"])
                         self.ui.tableWidget_3.setCellWidget(i, 5, progress_browser)
+                        button_info = QPushButton()
+                        button_info.icon = QIcon("./img/recommend.svg")
+                        button_info.setIcon(button_info.icon)
+                        # set size icon
+                        button_info.setIconSize(QtCore.QSize(30, 30))
+                        button_info.setStyleSheet("QPushButton{\n"
+"background-color: rgb(85, 255, 127);\n"
+"border-radius: 5px;\n"
+"border: 2px solid #23074d;\n"
+"height:40px;\n"
+"width: 105px;\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+                        self.ui.tableWidget_3.setCellWidget(i, 6, button_info)
+                        button_info.clicked.connect(lambda: self.show_info(profile_id))
                         
                         
         self.load_select()

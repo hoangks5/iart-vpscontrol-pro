@@ -43,7 +43,6 @@ def get_score(profile_id, api_key):
 	chrome_options = Options()
 	chrome_options.add_experimental_option("debuggerAddress", debugger_address)
 	# headless mode
-	chrome_options.
 	driver = webdriver.Chrome(options=chrome_options)
 	driver.get("https://ipfighter.com/")
 	time.sleep(2)

@@ -3166,6 +3166,11 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
                <string>Score Browser</string>
               </property>
              </column>
+             <column>
+              <property name="text">
+               <string>Info</string>
+              </property>
+             </column>
             </widget>
            </item>
            <item row="0" column="2">
@@ -3211,48 +3216,6 @@ width: 105px;
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
                <widget class="QComboBox" name="comboBox_2"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_19">
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string>Set kịch bản</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>img/load.svg</normaloff>img/load.svg</iconset>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_21">
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string>Bắt đầu</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>img/start.svg</normaloff>img/start.svg</iconset>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_20">
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="text">
-                 <string>Dừng lại</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>img/stop.svg</normaloff>img/stop.svg</iconset>
-                </property>
-               </widget>
               </item>
               <item>
                <widget class="QPushButton" name="pushButton_29">
